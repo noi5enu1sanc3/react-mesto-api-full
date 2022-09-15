@@ -1,0 +1,21 @@
+.popup__input-form {
+  box-sizing: border-box;
+  padding: 0;
+  padding-bottom: 13px;
+  margin-bottom: 5px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.popup__input-form:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 700px) {
+  .popup__input-form:last-of-type {
+    margin-bottom: 5px;
+  }
+}

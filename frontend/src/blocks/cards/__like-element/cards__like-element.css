@@ -1,0 +1,26 @@
+.cards__like-element {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  border-radius: 2px;
+  padding: 3px;
+  transition: all .4s ease-in-out;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+@media screen and (min-width: 1000px) {
+  .cards__like-element:hover {
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, .5);
+    cursor: pointer;
+  }
+}
+
+

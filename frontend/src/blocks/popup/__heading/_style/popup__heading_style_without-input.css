@@ -1,0 +1,9 @@
+.popup__heading_style_without-input {
+  margin-bottom: 38px;
+}
+
+@media screen and (max-width: 700px) {
+  .popup__heading_style_without-input {
+    margin-bottom: 59px;
+  }
+}

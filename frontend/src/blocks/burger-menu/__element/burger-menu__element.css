@@ -1,0 +1,30 @@
+.burger-menu__element {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transition: all .4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.burger-menu__element:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -9px;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transition: all .4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.burger-menu__element:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 9px;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transition: all .4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}

@@ -1,0 +1,15 @@
+.footer {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+  align-self: flex-end;
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media screen and (max-width: 700px) {
+  .footer {
+    padding-left: 19px;
+  }
+}

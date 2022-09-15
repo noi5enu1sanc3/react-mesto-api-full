@@ -1,0 +1,38 @@
+.burger-menu {
+    opacity: 0;
+    height: 0;
+}
+  
+.burger-menu:checked ~ .burger-menu__elements {
+  order: 3;
+}
+
+.burger-menu:checked ~ .burger-menu__elements > .burger-menu__element {
+  transform: rotate(45deg);
+}
+
+.burger-menu:checked ~ .burger-menu__elements > .burger-menu__element::before {
+  top: 0;
+  transform: rotate(0);
+}
+
+.burger-menu:checked ~ .burger-menu__elements > .burger-menu__element::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+.burger-menu:checked ~ .header__link-container {
+  visibility: visible;
+  position: static;
+  order: 1;
+  flex-direction: column;
+  gap: 18px;
+  border-bottom: 1px solid rgba(84, 84, 84, .7);
+  padding: 40px 0;
+  width: 100%;
+}
+
+.burger-menu:checked ~ .header__logo {
+  order: 2;
+}
+

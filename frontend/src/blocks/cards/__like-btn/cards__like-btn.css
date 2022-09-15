@@ -1,0 +1,25 @@
+.cards__like-btn {
+  padding: 0;
+  width: 22px;
+  height: 19px;
+  background: none;
+  border: none;
+  background-image: url(../../../images/cards__like-btn.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: opacity .6s ease-in-out;
+  -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+@media screen and (min-width: 1000px) {
+  .cards__like-btn:hover {
+    opacity: .5;
+  }
+}
+

@@ -1,0 +1,9 @@
+.cards__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-gap: 20px 17px;
+  grid-template-columns: repeat(auto-fit, 282px);
+  justify-content: center;
+}

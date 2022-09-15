@@ -1,0 +1,19 @@
+.burger-menu__elements {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  z-index: 1;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 600px) {
+  .burger-menu__elements {
+    visibility: visible;
+    position: relative;
+    order: 3;
+    margin-right: 30px;
+  }
+}

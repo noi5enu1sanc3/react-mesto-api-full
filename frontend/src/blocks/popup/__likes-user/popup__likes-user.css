@@ -1,0 +1,16 @@
+.popup__likes-user {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: .8px solid #000;
+}
+
+.popup__likes-user:last-of-type {
+  border: none;
+  padding-bottom: 0;
+}
+
+.popup__likes-user:first-of-type {
+  padding-top: 0;
+}
