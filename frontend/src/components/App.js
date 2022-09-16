@@ -52,14 +52,16 @@ function App() {
     api
     .getUserInfo()
     .then(res => {
-      if (res.data) {
+      if (res.data.email) {
         setCurrentUser(res.data);
         setUserEmail(res.data.email);
         setIsLoggedIn(true);
-        history.push('/');
+        history.push('./');
       }
     })
     .catch(err => {
+      setIsLoggedIn(false);
+      history.push('./signin');
       console.log(err, 'Authorization required');
     })
   }, [history])
@@ -103,7 +105,7 @@ function App() {
     auth
       .authorize({ password, email })
       .then((res) => {
-        if (res) {
+        if (res.data) {
           setIsLoggedIn(true);
           setCurrentUser(res.data);
           history.push("./");

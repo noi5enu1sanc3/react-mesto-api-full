@@ -1,6 +1,7 @@
 class Auth {
   constructor() {
-    this._baseUrl = 'http://localhost:3000/';
+    this._baseUrl = 'https://api.meremost.nomoredomains.sbs';
+    //this._baseUrl = "http://localhost:3000";
     this._headers = {
       "Content-Type": "application/json"
     };
@@ -10,7 +11,7 @@ class Auth {
     res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`);
 
   register({ password, email }) {
-    return fetch(`${this._baseUrl}signup`, {
+    return fetch(`${this._baseUrl}/signup`, {
       method: "POST",
       headers: this._headers,
       body: JSON.stringify({ password, email })
@@ -19,7 +20,7 @@ class Auth {
   }
 
   authorize({ password, email }) {
-    return fetch(`${this._baseUrl}signin`, {
+    return fetch(`${this._baseUrl}/signin`, {
       method: "POST",
       headers: this._headers,
       body: JSON.stringify({ password, email }),
@@ -29,7 +30,7 @@ class Auth {
   }
 
   logout() {
-    return fetch(`${this._baseUrl}signout`, {
+    return fetch(`${this._baseUrl}/signout`, {
       method: "GET",
       headers: this.headers,
       credentials: 'include',
@@ -38,11 +39,10 @@ class Auth {
   }
 
   getContent(token) {
-    return fetch(`${this._baseUrl}users/me`, {
+    return fetch(`${this._baseUrl}/users/me`, {
       method: "GET",
       headers: {
         ...this._headers,
-       // "Authorization" : `Bearer ${token}`
       }
     })
     .then((res) => this._getResponse(res))

@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 
+const helmet = require('helmet');
+
 const cors = require('cors');
 
 const { errors } = require('celebrate');
@@ -17,12 +19,25 @@ const { PORT = 3000 } = process.env;
 
 const app = express();
 
-app.use(cors({ origin: 'http://localhost:3001', credentials: true }));
+app.use(helmet());
+
+app.use(cors(
+  {
+    origin: ['http://localhost:3001', 'https://localhost:3001', 'https://meremost.nomorepartiesxyz.ru', 'http://meremost.nomorepartiesxyz.ru'],
+    credentials: true,
+  },
+));
 
 app.use(bodyParser.json());
 app.use(cookieParser());
 
 app.use(requestLogger);
+
+app.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
 
 app.use(router);
 

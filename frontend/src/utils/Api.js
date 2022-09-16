@@ -93,13 +93,12 @@ class Api {
 const api = new Api(
   {
     headers: {
-      //authorization: "e0205997-951b-4911-8a29-7b97b6aecfba",
       "Content-Type": "application/json",
     },
-    //id: "cohort-43",
   },
   {
-    baseUrl: "http://localhost:3000",
+    baseUrl: "https://api.meremost.nomoredomains.sbs",
+    //baseUrl: "http://localhost:3000",
     credentials: 'include',
   }
 );
