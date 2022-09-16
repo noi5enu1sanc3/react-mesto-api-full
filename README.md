@@ -5,8 +5,6 @@
 [meremost.nomorepartiesxyz.ru](https://meremost.nomorepartiesxyz.ru)
 `62.84.125.92`
 
-## Screenshot
-
 ![App Screenshot](https://i.ibb.co/HX2PjJ0/2022-09-16-17-45-06.jpg)
 
 ## Run Locally
