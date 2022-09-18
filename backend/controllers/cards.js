@@ -7,7 +7,7 @@ const { forbiddenErrorMessage, cardNotFoundMessage, validationErrorMessage } = r
 
 const getCards = async (req, res, next) => {
   try {
-    const cards = await Card.find({})
+    const cards = await Card.find({}).sort({ createdAt: -1 })
       .populate('owner')
       .populate('likes');
     res.send({ data: cards });
