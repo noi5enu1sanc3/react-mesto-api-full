@@ -3,7 +3,8 @@ class Auth {
     this._baseUrl = 'https://api.meremost.nomoredomains.sbs';
     //this._baseUrl = "http://localhost:3000";
     this._headers = {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
+      'Accept': 'application/json',
     };
   }
 
@@ -36,17 +37,6 @@ class Auth {
       credentials: 'include',
     })
     .then((res) => this._getResponse(res))
-  }
-
-  getContent(token) {
-    return fetch(`${this._baseUrl}/users/me`, {
-      method: "GET",
-      headers: {
-        ...this._headers,
-      }
-    })
-    .then((res) => this._getResponse(res))
-    .then (data => data)
   }
 }
 
