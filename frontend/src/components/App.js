@@ -75,7 +75,13 @@ function App() {
           setUserEmail(userData.data.email);
           setCards(cardsData.data);
         })
-        .catch((err) => console.log(`Возникла ошибка: ${err}`));
+        .catch((err) => {
+          console.log(`Возникла ошибка: ${err}`);
+          setIsLoggedIn(false);
+          history.push('/signin');
+          setIsSuccessful(false);
+          setIsInfoToolTipOpen(true);
+        });
     }
   }, [isLoggedIn]);
 
