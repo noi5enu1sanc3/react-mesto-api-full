@@ -5,7 +5,7 @@
 [meremost.nomorepartiesxyz.ru](https://meremost.nomorepartiesxyz.ru)
 `62.84.125.92`
 
-[~](https://user-images.githubusercontent.com/98043068/191097759-cc9fc5ba-3e0e-4bfd-b5b9-c4a1e7f2c21c.jpg)
+![~](https://user-images.githubusercontent.com/98043068/191097759-cc9fc5ba-3e0e-4bfd-b5b9-c4a1e7f2c21c.jpg)
 
 ## Run Locally
 
